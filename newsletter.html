@@ -2,58 +2,92 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Newsletter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción a la Newsletter</title>
     <link rel="icon" href="img/envelope-open-text-solid.ico" type="image/x-icon">
 </head>
 <body>
-    <h1>Inscripción a la Newsletter del Artista</h1>
+    <header>
+        <h1>Inscripción a la Newsletter del Artista</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="img/house-solid.ico" alt="Inicio" height="15"></a></li>
+                <li><a href="discografia.html"><img src="img/music-solid.ico" alt="Discografía" height="15"></a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html"><img src="img/house-solid.ico" alt="Inicio" height="15"></a></li>
-            <li><a href="discografia.html"><img src="img/music-solid.ico" alt="Discografía" height="15"></a></li>
-        </ul>
-    </nav>
+    <main>
+        <section>
+            <h2>Formulario de Inscripción</h2>
+            <table border="1" cellspacing="0" cellpadding="10">
+                <tr>
+                    <td colspan="2">
+                        <h3>Inscripción a la Newsletter</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="text" id="nombre" name="nombre" required></td>
+                </tr>
+                <tr>
+                    <td>Apellidos:</td>
+                    <td><input type="text" id="apellidos" name="apellidos" required></td>
+                </tr>
+                <tr>
+                    <td>Edad:</td>
+                    <td><input type="number" id="edad" name="edad" min="18" required></td>
+                </tr>
+                <tr>
+                    <td>País:</td>
+                    <td>
+                        <select id="pais" name="pais" required>
+                            <option value="">Selecciona tu país</option>
+                            <option value="us">Estados Unidos</option>
+                            <option value="es">España</option>
+                            <option value="mx">México</option>
+                            <option value="ar">Argentina</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Correo Electrónico:</td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td>Intereses:</td>
+                    <td>
+                        <fieldset>
+                            <legend>Cantantes</legend>
+                            <input type="radio" id="duki" name="cantante" value="Duki"> Duki<br>
+                            <input type="radio" id="eladio" name="cantante" value="Eladio Carrion"> Eladio Carrion<br>
+                            <input type="radio" id="bunny" name="cantante" value="Bad Bunny"> Bad Bunny<br>
+                            <input type="radio" id="khea" name="cantante" value="Khea"> Khea<br>
+                            <input type="radio" id="ysy" name="cantante" value="YSY A"> YSY A<br>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Notificaciones:</td>
+                    <td>
+                        <fieldset>
+                            <legend>Recibir Notificaciones</legend>
+                            <input type="checkbox" name="notificacion" value="SI"> Sí<br>
+                            <input type="checkbox" name="notificacion" value="NO"> No<br>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button type="submit">Enviar</button>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
 
-    <form action="/submit" method="post">
-        <label for="nombre">Nombre:</label> <br>
-        <input type="text" id="nombre" name="nombre" required>
-        <br>
-        <label for="apellidos">Apellidos:</label> <br>
-        <input type="text" id="apellidos" name="apellidos" required>
-        <br>
-        <label for="edad">Edad:</label> <br>
-        <input type="number" id="edad" name="edad" min="18" required>
-        <br>
-        <label for="pais">País:</label> <br>
-        <select id="pais" name="pais" required>
-            <option value="">Selecciona tu país</option>
-            <option value="us">Estados Unidos</option>
-            <option value="es">España</option>
-            <option value="mx">México</option>
-            <option value="ar">Argentina</option>
-        </select>
-        <br>
-        <label for="email">Correo Electrónico:</label> <br>
-        <input type="email" id="email" name="email" required>
-        <br>
-        <fieldset>
-            <legend>Intereses de Cantantes</legend>
-            <input type="radio" id="cantante" name="Duki"> Duki</input>
-            <input type="radio" id="cantante" name="Eladio"> Eladio Carrion</input>
-            <input type="radio" id="cantante" name="Bunny"> Bad Bunny</input>
-            <input type="radio" id="cantante" name="Khea"> Khea</input>
-            <input type="radio" id="cantante" name="YSY A"> YSY A</input>
-        </fieldset>
-        
-        <fieldset>
-        <legend> Recivir Notificaciones </legend>
-        <input type="checkbox" name="SI" id="SI"> SI </input>
-        <input type="checkbox" name="No" id="No"> NO </input>
-        </fieldset>
-
-        <br>
-        <button type="submit">Enviar</button>
-    </form>
+    <footer>
+        <p>&copy; 2024 YSY A Oficial. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
